@@ -1,6 +1,10 @@
 # SingleLineLayoutCell
 
 
+- 工欲善其事，必先利其器。面对各种各样的单行cell，虽然代码写起来不难，但是还是比较繁琐的，浪费时间。怎么样用一种cell直接搞定这些乱七八糟的样式，实现快速高效的实现。详情请看demo源码，以下是效果图以及使用方法。欢迎各位提出建议，指导，star。
+
+
+### 效果图
 
 ![1.gif](http://upload-images.jianshu.io/upload_images/1338042-2cda6fa6ebb0ec57.gif?imageMogr2/auto-orient/strip)
 
@@ -80,5 +84,3 @@
         phoneItem.keyboardType = UIKeyboardTypeNumberPad;
         
         TextInputItem *detailAddressItem = [TextInputItem textInputItemWithTitle:@"详细地址: " Placeholder:@"请输入详细地址" textInputType:TextInputTextView];
-
-
