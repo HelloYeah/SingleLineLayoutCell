@@ -19,9 +19,8 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
     
-    self.navigationItem.title = @"单行布局Cell";
+    [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.tableView registerClass:[SingleLineLayoutCell class] forCellReuseIdentifier:@"SingleLineLayoutCell"];
     self.tableView.tableFooterView = [[UIView alloc] init];
@@ -75,23 +74,21 @@
         
         {
             SingleLineLayoutItem *item2 = [SingleLineLayoutItem itemWithTitle:@"标题2" subtitle:@"the subtitle length is so long . oh my god" icon:@"4" rightType:SingleLineItemRightTypeCustomView];
-            item2.iconWidth = 35;
-            item2.titleAttributes = @{NSForegroundColorAttributeName : [UIColor redColor]};
-            item2.subTitleAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:12],NSForegroundColorAttributeName : [UIColor cyanColor]};
+            item2.iconWidth = 30;
             UIImageView *icon = [[UIImageView alloc] init];
             icon.image = [UIImage imageNamed:@"4"];
-            icon.size = CGSizeMake(40, 40);
+            icon.size = CGSizeMake(30, 30);
             item2.rightView = icon;
             [_dataArray addObject:item2];
         }
         
         {
-            SingleLineLayoutItem *item3 = [SingleLineLayoutItem itemWithTitle:@"很长很长的很长很长的很长很长的标题"  rightType:SingleLineItemRightTypeCheck];
+            SingleLineLayoutItem *item3 = [SingleLineLayoutItem itemWithTitle:@"这个标题有点长。真的有点长"  rightType:SingleLineItemRightTypeCheck];
             [_dataArray addObject:item3];
         }
         
         {
-            SingleLineLayoutItem *item4 = [SingleLineLayoutItem itemWithTitle:@"标题4" subtitle:@"subtitle" icon:@"" rightType:SingleLineItemRightTypeArrowAndCustomView];
+            SingleLineLayoutItem *item4 = [SingleLineLayoutItem itemWithTitle:@"我的收藏(99)" subtitle:@"详细信息" icon:@"" rightType:SingleLineItemRightTypeArrowAndCustomView];
             UILabel *rightLabel = [[UILabel alloc] init];
             rightLabel.font = [UIFont systemFontOfSize:13];
             rightLabel.text = @"右侧自定义的视图";
@@ -102,7 +99,9 @@
         }
         
         {
-            SingleLineLayoutItem *item5 = [SingleLineLayoutItem itemWithTitle:@"标题5" subtitle:@"subtitle" rightType:SingleLineItemRightTypeCustomView];
+            SingleLineLayoutItem *item5 = [SingleLineLayoutItem itemWithTitle:@"我的消息(5)" subtitle:@"详细信息" rightType:SingleLineItemRightTypeCustomView];
+            item5.titleAttributes = @{NSForegroundColorAttributeName : [UIColor redColor]};
+            item5.subTitleAttributes = @{NSForegroundColorAttributeName : [UIColor cyanColor]};
             item5.rightView = [[UISwitch alloc] init];
             [_dataArray addObject:item5];
         }

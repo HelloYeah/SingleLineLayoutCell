@@ -18,6 +18,9 @@
 		B42A913E1EBAC89700109EC5 /* SingleLineLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A913C1EBAC89700109EC5 /* SingleLineLayoutItem.m */; };
 		B42A91411EBAC8DD00109EC5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A91401EBAC8DD00109EC5 /* UIView+Frame.m */; };
 		B476DF481EC15DB700F0A048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B476DF471EC15DB700F0A048 /* Main.storyboard */; };
+		B476DF4C1EC1627D00F0A048 /* TextInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B476DF4B1EC1627D00F0A048 /* TextInputCell.m */; };
+		B476DF4F1EC1628200F0A048 /* TextInputItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B476DF4E1EC1628200F0A048 /* TextInputItem.m */; };
+		B476DF521EC1668600F0A048 /* SingleLineTextInputVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B476DF511EC1668600F0A048 /* SingleLineTextInputVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,12 @@
 		B42A913F1EBAC8DD00109EC5 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		B42A91401EBAC8DD00109EC5 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		B476DF471EC15DB700F0A048 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B476DF4A1EC1627D00F0A048 /* TextInputCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInputCell.h; sourceTree = "<group>"; };
+		B476DF4B1EC1627D00F0A048 /* TextInputCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextInputCell.m; sourceTree = "<group>"; };
+		B476DF4D1EC1628200F0A048 /* TextInputItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInputItem.h; sourceTree = "<group>"; };
+		B476DF4E1EC1628200F0A048 /* TextInputItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextInputItem.m; sourceTree = "<group>"; };
+		B476DF501EC1668600F0A048 /* SingleLineTextInputVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleLineTextInputVC.h; sourceTree = "<group>"; };
+		B476DF511EC1668600F0A048 /* SingleLineTextInputVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleLineTextInputVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,14 +119,17 @@
 		B42A90FD1EBAC7ED00109EC5 /* SingleLineLayoutCell */ = {
 			isa = PBXGroup;
 			children = (
+				B476DF491EC1627400F0A048 /* SingleLineTextInputCell */,
 				B42A91381EBAC89700109EC5 /* SingleLineLayoutCell */,
 				B42A91041EBAC7ED00109EC5 /* ViewController.h */,
 				B42A91051EBAC7ED00109EC5 /* ViewController.m */,
-				B42A913F1EBAC8DD00109EC5 /* UIView+Frame.h */,
-				B42A91401EBAC8DD00109EC5 /* UIView+Frame.m */,
+				B476DF501EC1668600F0A048 /* SingleLineTextInputVC.h */,
+				B476DF511EC1668600F0A048 /* SingleLineTextInputVC.m */,
 				B42A910A1EBAC7ED00109EC5 /* Assets.xcassets */,
 				B42A910C1EBAC7ED00109EC5 /* LaunchScreen.storyboard */,
 				B476DF471EC15DB700F0A048 /* Main.storyboard */,
+				B42A913F1EBAC8DD00109EC5 /* UIView+Frame.h */,
+				B42A91401EBAC8DD00109EC5 /* UIView+Frame.m */,
 				B42A910F1EBAC7ED00109EC5 /* Info.plist */,
 				B42A90FE1EBAC7ED00109EC5 /* Supporting Files */,
 			);
@@ -161,6 +173,17 @@
 				B42A913C1EBAC89700109EC5 /* SingleLineLayoutItem.m */,
 			);
 			path = SingleLineLayoutCell;
+			sourceTree = "<group>";
+		};
+		B476DF491EC1627400F0A048 /* SingleLineTextInputCell */ = {
+			isa = PBXGroup;
+			children = (
+				B476DF4D1EC1628200F0A048 /* TextInputItem.h */,
+				B476DF4E1EC1628200F0A048 /* TextInputItem.m */,
+				B476DF4A1EC1627D00F0A048 /* TextInputCell.h */,
+				B476DF4B1EC1627D00F0A048 /* TextInputCell.m */,
+			);
+			path = SingleLineTextInputCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,11 +322,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B476DF521EC1668600F0A048 /* SingleLineTextInputVC.m in Sources */,
 				B42A91411EBAC8DD00109EC5 /* UIView+Frame.m in Sources */,
 				B42A91061EBAC7ED00109EC5 /* ViewController.m in Sources */,
+				B476DF4C1EC1627D00F0A048 /* TextInputCell.m in Sources */,
 				B42A913D1EBAC89700109EC5 /* SingleLineLayoutCell.m in Sources */,
 				B42A91031EBAC7ED00109EC5 /* AppDelegate.m in Sources */,
 				B42A91001EBAC7ED00109EC5 /* main.m in Sources */,
+				B476DF4F1EC1628200F0A048 /* TextInputItem.m in Sources */,
 				B42A913E1EBAC89700109EC5 /* SingleLineLayoutItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

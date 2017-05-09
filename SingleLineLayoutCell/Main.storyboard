@@ -47,7 +47,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="单行输入框布局cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kI7-Ta-4Kz">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="单行输入框cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kI7-Ta-4Kz">
                                                     <rect key="frame" x="15" y="0.0" width="325" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -56,6 +56,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fKK-qx-gIv" kind="push" id="haF-2k-ApP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -71,9 +74,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDP-tN-gg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="970" y="-93"/>
+            <point key="canvasLocation" x="1002" y="-25"/>
         </scene>
-        <!--View Controller-->
+        <!--单行布局Cell-->
         <scene sceneID="ANU-xY-qR7">
             <objects>
                 <viewController id="7B4-UQ-f9Q" customClass="ViewController" sceneMemberID="viewController">
@@ -102,14 +105,52 @@
                             <constraint firstAttribute="trailing" secondItem="zKw-O2-aaV" secondAttribute="trailing" id="stS-BD-fjh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oqI-jK-7MU"/>
+                    <navigationItem key="navigationItem" title="单行布局Cell" id="oqI-jK-7MU"/>
                     <connections>
                         <outlet property="tableView" destination="zKw-O2-aaV" id="udN-bL-uRJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4w-LF-r7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655" y="-127"/>
+            <point key="canvasLocation" x="1826" y="-211"/>
+        </scene>
+        <!--单行输入框cell-->
+        <scene sceneID="SKz-e9-oPn">
+            <objects>
+                <viewController id="fKK-qx-gIv" customClass="SingleLineTextInputVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AhT-as-hiz"/>
+                        <viewControllerLayoutGuide type="bottom" id="O7Y-HM-jzz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d03-W9-Ufb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MsH-Gm-X6I">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fKK-qx-gIv" id="2f3-6M-dtC"/>
+                                    <outlet property="delegate" destination="fKK-qx-gIv" id="xDx-z1-5Wt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O7Y-HM-jzz" firstAttribute="top" secondItem="MsH-Gm-X6I" secondAttribute="bottom" id="Whj-zj-ezO"/>
+                            <constraint firstItem="MsH-Gm-X6I" firstAttribute="leading" secondItem="d03-W9-Ufb" secondAttribute="leading" id="ngA-sd-tWP"/>
+                            <constraint firstItem="MsH-Gm-X6I" firstAttribute="top" secondItem="AhT-as-hiz" secondAttribute="bottom" id="rGV-UZ-XTy"/>
+                            <constraint firstAttribute="trailing" secondItem="MsH-Gm-X6I" secondAttribute="trailing" id="tgs-lD-ASg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="单行输入框cell" id="t6j-1z-GsU"/>
+                    <connections>
+                        <outlet property="tableView" destination="MsH-Gm-X6I" id="qyY-j6-Ix6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TpR-IJ-0ys" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="506"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7zk-JW-Acg">
