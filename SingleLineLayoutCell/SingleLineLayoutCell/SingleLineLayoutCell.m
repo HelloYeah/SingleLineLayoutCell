@@ -7,17 +7,12 @@
 #import "SingleLineLayoutItem.h"
 #import "UIView+Frame.h"
 
-//static CGFloat interval = 5.f;
-
 @interface SingleLineLayoutCell ()
 
 @property (strong, nonatomic)  UIImageView *iconView;
 @property (strong, nonatomic)  UILabel *titleLabel;
 @property (strong, nonatomic)  UILabel *subTitleLabel;
 @property (strong, nonatomic)  UIView *rightView;
-
-@property (strong, nonatomic) SingleLineLayoutItem *recordSingleLineItem;
-
 @end
 
 @implementation SingleLineLayoutCell
@@ -30,13 +25,13 @@
     return self;
 }
 
-- (void)refreshTableViewCellWithEasyItem:(SingleLineLayoutItem *)singleLineItem
-{
-    self.recordSingleLineItem = singleLineItem;
+- (void)setRecordSingleLineItem:(SingleLineLayoutItem *)singleLineItem {
 
+    _recordSingleLineItem = singleLineItem;
+    
     CGFloat contentLeft = 12.5;
     /*********************** 图标 ***********************/
-     UIImage *image = (singleLineItem.icon) ? [UIImage imageNamed:singleLineItem.icon] : nil;
+    UIImage *image = (singleLineItem.icon) ? [UIImage imageNamed:singleLineItem.icon] : nil;
     if(singleLineItem.icon && image) {
         
         [self.contentView addSubview:self.iconView];
@@ -54,18 +49,19 @@
     }
     
     /*********************** 标题 ***********************/
- 
+    
     if (singleLineItem.title && singleLineItem.titleAttributes) {
         self.titleLabel.attributedText = [[NSAttributedString alloc] initWithString:singleLineItem.title attributes:singleLineItem.titleAttributes];
     } else {
         self.titleLabel.text = singleLineItem.title;
     }
-    [self.titleLabel sizeToFit];
+    
+    self.titleLabel.size = [self.titleLabel sizeThatFits:CGSizeMake(self.width * 0.45, self.height)];
     self.titleLabel.left = contentLeft;
     self.titleLabel.width = MIN(self.titleLabel.width, self.width * 0.45);
     contentLeft = self.titleLabel.right + 2;
     
-
+    
     /*********************** 子标题 ***********************/
     if (singleLineItem.subtitle) {
         
@@ -79,7 +75,7 @@
         self.subTitleLabel.left = contentLeft;
         self.subTitleLabel.width = MIN(self.subTitleLabel.width, self.width * 0.35);
         contentLeft = self.subTitleLabel.right;
-
+        
     }else {
         [self resetSubview:_subTitleLabel];
     }
@@ -154,6 +150,8 @@
     
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
+        _titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        _titleLabel.font = [UIFont systemFontOfSize:15];
     }
     return _titleLabel;
 }
@@ -162,6 +160,7 @@
     
     if (!_subTitleLabel) {
         _subTitleLabel = [[UILabel alloc] init];
+        _titleLabel.font = [UIFont systemFontOfSize:12];
     }
     return _subTitleLabel;
 }

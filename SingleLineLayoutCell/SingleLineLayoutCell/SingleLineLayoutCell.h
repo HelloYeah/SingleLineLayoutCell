@@ -8,9 +8,7 @@
 @class SingleLineLayoutItem;
 
 @interface SingleLineLayoutCell : UITableViewCell
-
-- (void)refreshTableViewCellWithEasyItem:(SingleLineLayoutItem *)singleLineItem;
-
+@property (nonatomic,strong) SingleLineLayoutItem *recordSingleLineItem;
 @end
 
 

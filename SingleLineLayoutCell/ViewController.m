@@ -31,10 +31,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
     SingleLineLayoutCell * cell = [tableView dequeueReusableCellWithIdentifier:@"SingleLineLayoutCell"];
     SingleLineLayoutItem *item = self.dataArray[indexPath.row ];
-    [cell refreshTableViewCellWithEasyItem:item];
+    cell.recordSingleLineItem = item;
     return cell;
 }
 
@@ -64,8 +63,8 @@
         icon.size = CGSizeMake(40, 40);
         item2.rightView = icon;
         
-        SingleLineLayoutItem *item3 = [SingleLineLayoutItem itemWithTitle:@"很长很长的标题真的很长"  rightType:SingleLineItemRightTypeCheck];
-        
+        SingleLineLayoutItem *item3 = [SingleLineLayoutItem itemWithTitle:@"很长很长的很长很长的很长很长的标题真的很长很长很长的很长很长的很长很长的标题真的很长"  rightType:SingleLineItemRightTypeCheck];
+      
         SingleLineLayoutItem *item4 = [SingleLineLayoutItem itemWithTitle:@"标题4" subtitle:@"subtitle 4 4" icon:@"" rightType:SingleLineItemRightTypeArrowAndCustomView];
         UIImageView *icon1 = [[UIImageView alloc] init];
         icon1.image = [UIImage imageNamed:@"5"];
@@ -74,7 +73,7 @@
         item4.titleAttributes = @{NSForegroundColorAttributeName : [UIColor blueColor]};
         item4.subTitleAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:12],NSForegroundColorAttributeName : [UIColor greenColor]};
         
-        _dataArray = @[item0,item1,item2,item3,item4,item0,item1,item2,item3,item4,item0,item1,item2,item3,item4,item0,item1,item2,item3,item4,item0,item1,item2,item3,item4];
+        _dataArray = @[item0,item1,item2,item3,item4,];
     }
     return _dataArray;
 }
