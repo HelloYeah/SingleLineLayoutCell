@@ -21,8 +21,18 @@
     
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
          [self.contentView addSubview:self.titleLabel];
+        self.userInteractionEnabled = YES;
+        [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click:)]];
     }
     return self;
+}
+
+
+- (void)click:(UIGestureRecognizer *)tap {
+    
+    if (self.recordSingleLineItem.operation) {
+        self.recordSingleLineItem.operation();
+    }
 }
 
 - (void)setRecordSingleLineItem:(SingleLineLayoutItem *)singleLineItem {
@@ -58,7 +68,7 @@
     
     self.titleLabel.size = [self.titleLabel sizeThatFits:CGSizeMake(self.width * 0.45, self.height)];
     self.titleLabel.left = contentLeft;
-    self.titleLabel.width = MIN(self.titleLabel.width, self.width * 0.45);
+    self.titleLabel.width = MIN(self.titleLabel.width, self.width * 0.6);
     contentLeft = self.titleLabel.right + 2;
     
     
@@ -73,7 +83,7 @@
         }
         [self.subTitleLabel sizeToFit];
         self.subTitleLabel.left = contentLeft;
-        self.subTitleLabel.width = MIN(self.subTitleLabel.width, self.width * 0.35);
+        self.subTitleLabel.width = MIN(self.subTitleLabel.width, self.width * 0.4);
         contentLeft = self.subTitleLabel.right;
         
     }else {
@@ -160,7 +170,8 @@
     
     if (!_subTitleLabel) {
         _subTitleLabel = [[UILabel alloc] init];
-        _titleLabel.font = [UIFont systemFontOfSize:12];
+        _subTitleLabel.font = [UIFont systemFontOfSize:12];
+        _subTitleLabel.textColor = [UIColor lightGrayColor];
     }
     return _subTitleLabel;
 }

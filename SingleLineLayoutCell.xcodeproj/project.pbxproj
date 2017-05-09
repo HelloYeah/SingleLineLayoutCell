@@ -10,7 +10,6 @@
 		B42A91001EBAC7ED00109EC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A90FF1EBAC7ED00109EC5 /* main.m */; };
 		B42A91031EBAC7ED00109EC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A91021EBAC7ED00109EC5 /* AppDelegate.m */; };
 		B42A91061EBAC7ED00109EC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A91051EBAC7ED00109EC5 /* ViewController.m */; };
-		B42A91091EBAC7ED00109EC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B42A91071EBAC7ED00109EC5 /* Main.storyboard */; };
 		B42A910B1EBAC7ED00109EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42A910A1EBAC7ED00109EC5 /* Assets.xcassets */; };
 		B42A910E1EBAC7ED00109EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B42A910C1EBAC7ED00109EC5 /* LaunchScreen.storyboard */; };
 		B42A91191EBAC7ED00109EC5 /* SingleLineLayoutCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A91181EBAC7ED00109EC5 /* SingleLineLayoutCellTests.m */; };
@@ -18,6 +17,7 @@
 		B42A913D1EBAC89700109EC5 /* SingleLineLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A913A1EBAC89700109EC5 /* SingleLineLayoutCell.m */; };
 		B42A913E1EBAC89700109EC5 /* SingleLineLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A913C1EBAC89700109EC5 /* SingleLineLayoutItem.m */; };
 		B42A91411EBAC8DD00109EC5 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A91401EBAC8DD00109EC5 /* UIView+Frame.m */; };
+		B476DF481EC15DB700F0A048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B476DF471EC15DB700F0A048 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		B42A91021EBAC7ED00109EC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B42A91041EBAC7ED00109EC5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B42A91051EBAC7ED00109EC5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B42A91081EBAC7ED00109EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B42A910A1EBAC7ED00109EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B42A910D1EBAC7ED00109EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B42A910F1EBAC7ED00109EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		B42A913C1EBAC89700109EC5 /* SingleLineLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleLineLayoutItem.m; sourceTree = "<group>"; };
 		B42A913F1EBAC8DD00109EC5 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		B42A91401EBAC8DD00109EC5 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		B476DF471EC15DB700F0A048 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +115,9 @@
 				B42A91051EBAC7ED00109EC5 /* ViewController.m */,
 				B42A913F1EBAC8DD00109EC5 /* UIView+Frame.h */,
 				B42A91401EBAC8DD00109EC5 /* UIView+Frame.m */,
-				B42A91071EBAC7ED00109EC5 /* Main.storyboard */,
 				B42A910A1EBAC7ED00109EC5 /* Assets.xcassets */,
 				B42A910C1EBAC7ED00109EC5 /* LaunchScreen.storyboard */,
+				B476DF471EC15DB700F0A048 /* Main.storyboard */,
 				B42A910F1EBAC7ED00109EC5 /* Info.plist */,
 				B42A90FE1EBAC7ED00109EC5 /* Supporting Files */,
 			);
@@ -273,8 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B42A910E1EBAC7ED00109EC5 /* LaunchScreen.storyboard in Resources */,
+				B476DF481EC15DB700F0A048 /* Main.storyboard in Resources */,
 				B42A910B1EBAC7ED00109EC5 /* Assets.xcassets in Resources */,
-				B42A91091EBAC7ED00109EC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,14 +340,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B42A91071EBAC7ED00109EC5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B42A91081EBAC7ED00109EC5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B42A910C1EBAC7ED00109EC5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -540,6 +532,7 @@
 				B42A912A1EBAC7ED00109EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B42A912B1EBAC7ED00109EC5 /* Build configuration list for PBXNativeTarget "SingleLineLayoutCellTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +541,7 @@
 				B42A912D1EBAC7ED00109EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B42A912E1EBAC7ED00109EC5 /* Build configuration list for PBXNativeTarget "SingleLineLayoutCellUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +550,7 @@
 				B42A91301EBAC7ED00109EC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
