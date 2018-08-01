@@ -91,7 +91,7 @@
     }
     
     /*********************** 右侧视图 ***********************/
-    
+    [_rightView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];//增加此已解决复用时候重影问题
     [self resetSubview:_rightView];
     
     SingleLineItemRightType type = singleLineItem.rightType;
